@@ -1,22 +1,21 @@
 {
-  "name": "@lunartools/sdk",
+  "name": "lunartools-sdk",
   "version": "1.0.0",
   "description": "Official SDK for Lunar Tools API",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "private": false,
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/senpai0807/lunartools-sdk-js.git"
+    "url": "git+https://github.com/senpai0807/lunartools-sdk-js.git"
   },
   "author": "Lunar Tools",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
@@ -39,5 +38,8 @@
     "@types/node": "^24.10.0",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
