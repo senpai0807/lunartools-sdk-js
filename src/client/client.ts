@@ -36,7 +36,7 @@ export class Client {
     async addProduct(product: AddProduct): Promise<void> {
         this.validateAddProduct(product);
 
-        await this.api.post('/api/database/add-product', {
+        await this.api.post('/sdk/add-order', {
             clientId: this.clientId,
             accessToken: this.accessToken,
             ...product
@@ -51,7 +51,7 @@ export class Client {
     async addOrder(order: AddOrder): Promise<void> {
         this.validateAddOrder(order);
 
-        await this.api.post('/api/database/add-order', {
+        await this.api.post('/sdk/add-order', {
             clientId: this.clientId,
             accessToken: this.accessToken,
             ...order
